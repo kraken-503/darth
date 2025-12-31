@@ -12,13 +12,18 @@
 
 
  **Table of Contents**
-- [Requirements](#Requirements)
-- [Usage](#usage)
+- [Overview](#overview)
+- [Requirements](#requirements)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
 - [License](#license)
 
 <br>
+
+## Overview
+
+It is a shell script that runs one or more Nmap commands automatically, so you don’t have to type them manually each time.​
+It typically takes a target (IP address) as input, runs a predefined scan (like a quick scan, full port scan, or service detection).
 
 ## Requirements
 nmap, ofc
@@ -28,4 +33,5 @@ sudo pacman -Sy nmap
 sudo dnf install nmap -y
 brew install nmap
 ```
+
 
