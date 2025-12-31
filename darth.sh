@@ -24,7 +24,7 @@ validation() {
     return 0
 }
 
-apt-get install nmap -y
+apt-get update -y && apt-get install nmap -y
 
 sleep 1
 
@@ -68,22 +68,22 @@ read -p "Select option : " option
 
 case "$option" in 
   1) sleep 1
-     sudo nmap -sS "$target_ip" -v 
+     nmap -sS "$target_ip" -v 
     ;;
   2) sleep 1
-     sudo nmap -sA "$target_ip" -v 
+     nmap -sA "$target_ip" -v 
     ;;
   3) sleep 1
-     sudo nmap -Pn -sI "$target_ip" -v 
+     nmap -Pn -sI "$target_ip" -v 
     ;;
   4) sleep 1
-     sudo nmap -sU "$target_ip" -v 
+     nmap -sU "$target_ip" -v 
     ;;
   5) sleep 1
-     sudo nmap -f "$target_ip" -v 
+     nmap -f "$target_ip" -v 
     ;;
   6) sleep 1
-     sudo nmap --script vuln malware -T4 "$target_ip" -v 
+     nmap --script vuln malware -T4 "$target_ip" -v 
     ;;
   7) sleep 1
      nmap -O "$target_ip" -v 
@@ -92,7 +92,7 @@ case "$option" in
      nmap -sV "$target_ip" -v 
     ;;
   9) sleep 1
-     sudo nmap --spoof-mac Cisco "$target_ip" -v 
+     nmap --spoof-mac Cisco "$target_ip" -v 
     ;;
   10) sleep 1
      nmap -p- "$target_ip" -v 
