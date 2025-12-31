@@ -12,8 +12,19 @@
 
 
  **Table of Contents**
-- [Installation](#-installation)
+- [Requirements](#-Requirements)
 - [Usage](#-usage)
 - [Configuration](#-configuration)
 - [Contributing](#-contributing)
 - [License](#-license)
+
+<br>
+
+## Requirements
+nmap, ofc
+```
+sudo apt install nmap -y
+sudo pacman -Sy nmap
+sudo dnf install nmap -y
+brew install nmap
+```
