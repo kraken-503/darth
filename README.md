@@ -42,8 +42,9 @@ cd darth/
 chmod +x darth.sh
 sudo darth.sh
 ```
-
+<br><br>
 <p align="center">
   <em>Made with ❤️ by kraken-503</em>
 </p>
+
 
