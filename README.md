@@ -1,10 +1,10 @@
 <div align="center">
-  <h1><pre>
+  <h2><pre>
 ░▒█▀▀▄░█▀▀▄░▒█▀▀▄░▀▀█▀▀░▒█░▒█
 ░▒█░▒█▒█▄▄█░▒█▄▄▀░░▒█░░░▒█▀▀█
 ░▒█▄▄█▒█░▒█░▒█░▒█░░▒█░░░▒█░▒█
 </pre>
-</h1>
+</h2>
   <img src="https://github.com/user-attachments/assets/a494b5ed-85eb-47cf-b6f3-360e211ce02c" alt="Logo" width="200">
   <p>A simple nmap automater written in shell script</p>
 </div>
@@ -14,9 +14,8 @@
  **Table of Contents**
 - [Overview](#overview)
 - [Requirements](#requirements)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
+- [Usage](#usage)
+
 
 <br>
 
@@ -34,4 +33,17 @@ sudo dnf install nmap -y
 brew install nmap
 ```
 
+## Usage
+Keep in mind, almost every scanning vector in this script requires **superuser** permissions.
+
+```
+git clone https://github.com/kraken-503/darth.git
+cd darth/
+chmod +x darth.sh
+sudo darth.sh
+```
+
+<p align="center">
+  <em>Made with ❤️ by kraken-503</em>
+</p>
 
