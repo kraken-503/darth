@@ -12,11 +12,11 @@
 
 
  **Table of Contents**
-- [Requirements](#-Requirements)
-- [Usage](#-usage)
-- [Configuration](#-configuration)
-- [Contributing](#-contributing)
-- [License](#-license)
+- [Requirements](#Requirements)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
 
 <br>
 
@@ -28,3 +28,4 @@ sudo pacman -Sy nmap
 sudo dnf install nmap -y
 brew install nmap
 ```
+
