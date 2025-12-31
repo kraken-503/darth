@@ -68,34 +68,34 @@ read -p "Select option : " option
 
 case "$option" in 
   1) sleep 1
-     nmap -sS "$target_ip" -v 
+     sudo nmap -sS "$target_ip" -v 
     ;;
   2) sleep 1
-     nmap -sA "$target_ip" -v 
+     sudo nmap -sA "$target_ip" -v 
     ;;
   3) sleep 1
-     nmap -Pn -sI "$target_ip" -v 
+     sudo nmap -Pn -sI "$target_ip" -v 
     ;;
   4) sleep 1
-     nmap -sU "$target_ip" -v 
+     sudo nmap -sU "$target_ip" -v 
     ;;
   5) sleep 1
-     nmap -f "$target_ip" -v 
+     sudo nmap -f "$target_ip" -v 
     ;;
   6) sleep 1
-     nmap --script vuln malware -T4 "$target_ip" -v 
+     sudo nmap --script vuln malware -T4 "$target_ip" -v 
     ;;
   7) sleep 1
-     nmap -O "$target_ip" -v 
+     sudo nmap -O "$target_ip" -v 
     ;;
   8) sleep 1
-     nmap -sV "$target_ip" -v 
+     sudo nmap -sV "$target_ip" -v 
     ;;
   9) sleep 1
-     nmap --spoof-mac Cisco "$target_ip" -v 
+     sudo nmap --spoof-mac Cisco "$target_ip" -v 
     ;;
   10) sleep 1
-     nmap -p- "$target_ip" -v 
+     sudo nmap -p- "$target_ip" -v 
     ;;
   *)
     echo "Invalid option"
