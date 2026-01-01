@@ -40,11 +40,12 @@ Keep in mind, almost every scanning vector in this script requires **superuser**
 git clone https://github.com/kraken-503/darth.git
 cd darth/
 chmod +x darth.sh
-sudo darth.sh
+sudo ./darth.sh
 ```
 <br><br>
 <p align="center">
   <em>Made with ❤️ by kraken-503</em>
 </p>
+
 
 
