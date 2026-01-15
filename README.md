@@ -42,7 +42,8 @@ chmod +x darth.sh
 sudo ./darth.sh
 ```
 <br>
-Keep in mind, almost every scanning vector in this script requires **superuser** permissions.
+>[!IMPORTANT]
+>Keep in mind, almost every scanning vector in this script requires **superuser** permissions.
 
 <br><br>
 <p align="center">
