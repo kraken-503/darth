@@ -42,13 +42,15 @@ chmod +x darth.sh
 sudo ./darth.sh
 ```
 <br>
+
 >[!IMPORTANT]
->Keep in mind, almost every scanning vector in this script requires **superuser** permissions.
+> Keep in mind, almost every scanning vector in this script requires **superuser** permissions.
 
 <br><br>
 <p align="center">
   <em>Made with ❤️ by kraken-503</em>
 </p>
+
 
 
 
