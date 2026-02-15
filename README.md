@@ -10,12 +10,10 @@
 </div>
 <br><br>
 
-
  **Table of Contents**
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Usage](#usage)
-
 
 <br>
 
@@ -50,6 +48,7 @@ sudo ./darth.sh
 <p align="center">
   <em>Made with ❤️ by kraken-503</em>
 </p>
+
 
 
 
