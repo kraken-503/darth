@@ -39,14 +39,16 @@ while true; do
       echo "\n\t [$target_ip] : host down" && exit
     fi
   else
-    echo "[Invalid ip"]
+    echo "[Invalid ip]"
     continue
   fi 
 
 options="
 +---------------+----------------------+----------------------------------------------++
+
 | Opt | Technique      | Purpose                                      | Stealth Level  |
 +---------------+----------------------+----------------------------------------------++
+
 | 1   | SYN Scan       | Fast, stealthy port scan                     | High           |
 | 2   | ACK Scan       | Firewall rule mapping                        | Medium         |
 | 3   | Idle Scan      | Zombie-based ultra‑stealth scan              | Very High      |
@@ -57,6 +59,18 @@ options="
 | 8   | Version Detect | Identify service versions                    | Low            |
 | 9   | MAC Spoofing   | Mask hardware identity                       | Medium         |
 | 10  | All-Ports Scan | Scan all 65535 ports                         | Low            |
+| 11  | Aggressive     | OS, version, script, and traceroute combo     | Low            |
+| 12  | Ping Sweep     | ICMP network discovery scan                  | Medium         |
+| 13  | Default Script | Safe NSE script checks                       | Medium         |
+| 14  | No Ping Scan   | Scan host assuming it is online              | High           |
+| 15  | FIN Scan       | Exploit RFC behaviors to bypass firewalls    | High           |
+| 16  | Xmas Scan      | Sets FIN, PSH, URG flags for stateless tests | High           |
+| 17  | Null Scan      | Sends packets with no TCP flags set          | High           |
+| 18  | Window Scan    | Check TCP window sizes for port states       | Medium         |
+| 19  | Maimon Scan    | Sends FIN/ACK packets to probe responses     | High           |
+| 20  | Decoy Scan     | Mask real IP behind spoofed traffic clones   | High           |
+| 21  | Fast Scan      | Scan fewer common ports to save time         | Low            |
+| 22  | Top 100 Ports  | Focus strictly on the 100 highest used ports | Low            |
 +---------------+----------------------+----------------------------------------------++
 "
 echo "\n $options"
@@ -96,6 +110,42 @@ case "$option" in
     ;;
   10) sleep 1
      sudo nmap -p- "$target_ip" -v 
+    ;;
+  11) sleep 1
+     sudo nmap -A "$target_ip" -v
+    ;;
+  12) sleep 1
+     sudo nmap -sn "$target_ip" -v
+    ;;
+  13) sleep 1
+     sudo nmap -sC "$target_ip" -v
+    ;;
+  14) sleep 1
+     sudo nmap -Pn "$target_ip" -v
+    ;;
+  15) sleep 1
+     sudo nmap -sF "$target_ip" -v
+    ;;
+  16) sleep 1
+     sudo nmap -sX "$target_ip" -v
+    ;;
+  17) sleep 1
+     sudo nmap -sN "$target_ip" -v
+    ;;
+  18) sleep 1
+     sudo nmap -sW "$target_ip" -v
+    ;;
+  19) sleep 1
+     sudo nmap -sM "$target_ip" -v
+    ;;
+  20) sleep 1
+     sudo nmap -D RND:10 "$target_ip" -v
+    ;;
+  21) sleep 1
+     sudo nmap -F "$target_ip" -v
+    ;;
+  22) sleep 1
+     sudo nmap --top-ports 100 "$target_ip" -v
     ;;
   *)
     echo "Invalid option"
